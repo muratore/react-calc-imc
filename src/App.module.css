@@ -1,0 +1,122 @@
+* {
+    box-sizing: border-box;
+}
+body{
+    font-family: "Arial";
+    color: gray;
+}
+.main{
+    max-width: 900px;
+    margin: 40px auto; 
+}
+
+.header{
+    width: 100%;
+    max-width: 900px;
+    padding: 1em 0;
+    background-color: gray;
+    color: #fff;
+}
+
+.container{
+    max-width: 900px;
+    display: flex;
+    gap: 80px;
+    margin: 40px auto; 
+}
+.boxLeft{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+.boxLeft h1{
+    margin: 0;
+}
+.boxLeft input{
+    border: none;
+    border-bottom: 1px solid gray;
+    background: inherit;
+    outline: 0;
+    padding: 1em 0;
+    margin-bottom: 1em;
+}
+.boxLeft input:disabled{
+    opacity: .5;
+}
+.boxLeft button{
+    margin-top: 1em;
+    padding: 1em;
+    border-radius:20px;
+    border: none;
+    background-color:rgba(100,100,100,.7);
+    cursor: pointer;
+    color:white;
+    transition: background-color .3s ease
+}
+
+
+.boxLeft button:hover{
+    background-color:rgba(100,100,100,.4);
+}
+.boxLeft button:disabled{
+    background-color:rgba(100,100,100,.4);
+}
+.boxRight{
+    display: flex;
+    flex:1;
+}
+
+.boxRight .grid{
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.container .rightBig{
+    display: flex;
+    flex: 1;
+    position: relative;
+    
+}
+
+.container .rightArrow{
+    display: flex;
+    justify-content: center;
+    align-itens: center;
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: rgba(100,100,100,1);
+    cursor: pointer;
+    margin-left: -35px;
+    top: calc(50% - 35px);
+    transition: background-color .3s ease;
+}
+
+.container .rightArrow:hover{
+    background-color: rgba(100,100,100,.4);
+}
+
+
+@media (max-width: 770px){
+    .container{
+        padding: 0 2em;
+        flex-direction: column;
+        margin-top: 20px;
+        gap: 3em;
+    }
+    .header{
+        padding: 1em 2em;
+    }
+}
+
+@media (max-width: 450px){
+    .boxRight .grid{
+       
+        grid-template-columns: 1fr;
+        
+    }
+    
+}
